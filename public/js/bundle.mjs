@@ -1119,7 +1119,7 @@ const $896fce0a0eaf741b$export$596d806903d1f59e = async (email, password)=>{
         const res = await (0, (/*@__PURE__*/$parcel$interopDefault($4829bbf1aa53fe26$exports)))({
             method: "POST",
             //url: 'http://127.0.0.1:3000/api/v1/users/login', //this is our login endpoint
-            url: `${process.env.BASE_URL}/api/v1/users/login`,
+            url: `https://pratik-do9h.onrender.com/api/v1/users/login`,
             //now sending data along with the request in the body
             data: {
                 email: email,
