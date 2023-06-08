@@ -1,0 +1,19 @@
+//- this filename starts with _ becuase this file is included in main file(base)
+header.header
+    nav.nav.nav--tours 
+        a.nav__el(href="/") All Tours 
+    //- for creating a div element no need to specify div, only . is enough to recognize that it is a div
+    .header__logo 
+        img(src="/img/logo-white.png", alt="Natours logo")
+    nav.nav.nav--user
+        //- using if else condition of pug to know exactly that user is logged in or not
+        //- this user comes from the res.locals.user = currentUser
+        if user
+            span(data-value=`${user.name}`)
+            a.nav__el.nav__el--logout Log out
+            a.nav__el(href="/me")
+                img.nav__user-img(src=`/img/users/${user.photo}`, alt=`Photo of ${user.name}`)
+                span= user.name.split(' ')[0]
+        else 
+            a(href='/login').nav__el Log in 
+            a(href='/signup').nav__el.nav__el--cta Sign up
