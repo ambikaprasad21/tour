@@ -5,8 +5,8 @@ export const signup = async (email, name, password, confirmPassword) => {
   try {
     const res = await axios({
       method: 'POST',
-      //url: 'http://127.0.0.1:8000/api/v1/users/signup', //this is our login endpoint
-      url: `${process.env.BASE_URL}/api/v1/users/signup`,
+      url: 'http://127.0.0.1:8000/api/v1/users/signup', //this is our login endpoint
+      //url: `${process.env.BASE_URL}/api/v1/users/signup`,
       //now sending data along with the request in the body
       data: {
         email: email, //as our endpoint takes the email and password so here we define the email and password
