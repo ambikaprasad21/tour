@@ -1,6 +1,6 @@
-# Natours Application
+# 👋Natours Application
 
-Built using modern technologies : Node.js, express.js, mongoDB, mongoose
+Built using modern technologies : Node.js, express.js, mongoDB, mongoose and a lot of npm packages
 
 ## How to run on your machine
 
