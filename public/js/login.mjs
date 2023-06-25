@@ -1,6 +1,7 @@
 /*eslint-disable */
 //import '@babel/polyfill'; //we do not store it in a variable because we want this whole file to be included in our bundle/index.js file
-import axios from './../../node_modules/axios/dist/axios';
+// import axios from './../../node_modules/axios/dist/axios';
+import axios from './axios'
 export const login = async (email, password) => {
   //exporting the login function
   try {
