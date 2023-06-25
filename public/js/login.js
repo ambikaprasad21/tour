@@ -1,13 +1,23 @@
 /*eslint-disable */
 //import '@babel/polyfill'; //we do not store it in a variable because we want this whole file to be included in our bundle/index.js file
+<<<<<<< HEAD:public/js/login.js
 import axios from 'axios/dist/axios';
+=======
+// import axios from './../../node_modules/axios/dist/axios';
+import axios from './axios'
+>>>>>>> b2b540a5c245a5b5c39ba94083493c5eedf3c67d:public/js/login.mjs
 export const login = async (email, password) => {
   //exporting the login function
   try {
     const res = await axios({
       method: 'POST',
+<<<<<<< HEAD:public/js/login.js
       url: 'http://127.0.0.1:8000/api/v1/users/login', //this is our login endpoint
       //url: `https://pratik-do9h.onrender.com/api/v1/users/login`, //in production we need to remove the localhost domain
+=======
+      url: '/api/v1/users/login', //this is our login endpoint
+      //url: `/api/v1/users/login`, //in production we need to remove the localhost domain
+>>>>>>> b2b540a5c245a5b5c39ba94083493c5eedf3c67d:public/js/login.mjs
       //now sending data along with the request in the body
       data: {
         email: email, //as our endpoint takes the email and password so here we define the email and password
