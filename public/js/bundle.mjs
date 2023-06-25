@@ -1118,8 +1118,8 @@ const $896fce0a0eaf741b$export$596d806903d1f59e = async (email, password)=>{
     try {
         const res = await (0, (/*@__PURE__*/$parcel$interopDefault($4829bbf1aa53fe26$exports)))({
             method: "POST",
-            //url: 'http://127.0.0.1:3000/api/v1/users/login', //this is our login endpoint
-            url: `https://pratik-do9h.onrender.com/api/v1/users/login`,
+            url: "http://127.0.0.1:8000/api/v1/users/login",
+            //url: `https://pratik-do9h.onrender.com/api/v1/users/login`, //in production we need to remove the localhost domain
             //now sending data along with the request in the body
             data: {
                 email: email,
@@ -1155,8 +1155,8 @@ const $4659294995b47e1b$export$7200a869094fec36 = async (email, name, password, 
     try {
         const res = await (0, (/*@__PURE__*/$parcel$interopDefault($4829bbf1aa53fe26$exports)))({
             method: "POST",
-            //url: 'http://127.0.0.1:8000/api/v1/users/signup', //this is our login endpoint
-            url: `${process.env.BASE_URL}/api/v1/users/signup`,
+            url: "http://127.0.0.1:8000/api/v1/users/signup",
+            //url: `${process.env.BASE_URL}/api/v1/users/signup`,
             //now sending data along with the request in the body
             data: {
                 email: email,
@@ -1227,8 +1227,7 @@ const $e123b3528abadfc1$export$a0973bcfe11b05c9 = async ()=>{
     try {
         const res = await (0, (/*@__PURE__*/$parcel$interopDefault($4829bbf1aa53fe26$exports)))({
             method: "GET",
-            // url: 'http://127.0.0.1:8000/api/v1/users/logout'
-            url: `${process.env.BASE_URL}/api/v1/users/logout`
+            url: "http://127.0.0.1:8000/api/v1/users/logout"
         });
         if (res.data.status === "success") location.reload(true); //this will reload data from server and not from browser cache
     } catch (err) {
@@ -1244,7 +1243,7 @@ const $e123b3528abadfc1$export$a0973bcfe11b05c9 = async ()=>{
 
 const $25dbe5dc881011d2$export$8ddaddf355aae59c = async (data, type)=>{
     try {
-        const url = type === "password" ? `${process.env.BASE_URL}/api/v1/users/updateMyPassword` : `${process.env.BASE_URL}/api/v1/users/updateMe`;
+        const url = type === "password" ? `http://127.0.0.1:8000/api/v1/users/updateMyPassword` : `http://127.0.0.1:8000/api/v1/users/updateMe`;
         const res = await (0, (/*@__PURE__*/$parcel$interopDefault($4829bbf1aa53fe26$exports)))({
             method: "PATCH",
             // now depending on the type string we are going to decide the url

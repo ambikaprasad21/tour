@@ -11,7 +11,7 @@ const DB = process.env.DATABASE.replace(
   process.env.DATABASE_PASSWORD
 ); //DB will contain our connection string
 
-//using mongoose we connect our application to database, while using mongoose to connect to database, we pass some options whicha are used in deprecation warnings
+//using mongoose we connect our application to database, while using mongoose to connect to database, we pass some options which are used in deprecation warnings
 mongoose
   .connect(DB, {
     //mongoose.connect will return a promise
